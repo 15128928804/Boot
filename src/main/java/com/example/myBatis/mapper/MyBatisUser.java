@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 import java.util.Map;
 
@@ -12,6 +13,7 @@ import java.util.Map;
  * Created by Liu on 2017/11/8.
  */
 @Mapper
+@Repository
 public interface MyBatisUser {
 
     @Insert("insert into tp_user(tel,password,nickname) values(#{tel},md5(#{pwd}),#{tel})")
