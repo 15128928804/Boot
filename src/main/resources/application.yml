@@ -1,0 +1,38 @@
+spring:
+
+  profiles:
+      active: dev
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+server:
+   port: 8088
+
+demo:
+  name: 礼拜天
+  age: 120
+  height: 180cm
+  weight: 65kg
+
+demo2:
+  name: 白天
+  age: 30
+  height: 170cm
+  weight: 60kg
+  girl:
+    name: Marry.Jean
+    age: 18
+
+
+
+
+
+rand:
+  str: ${random.value} # 生成32位的随机字符串
+  uuid: ${random.uuid} # UUID
+  num: ${random.int(100)} # 100以内的随机整数
+  sum: ${random.int(0,99)} # 0-99以内的随机整数
